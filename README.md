@@ -22,15 +22,6 @@ The following tasks are currently being worked on for Wasmie:
 - **Testing**: Writing tests for each command and logic functions to ensure the stability and reliability of the CLI.
 
 
-## Contributing
-
-Contributions to Wasmie are welcome and appreciated! Please see the contribution guidelines for more information on how to get started.
-Wasmie is a third party CLI for wasmer.
-
-## License
-
-Wasmie is licensed under the [GPL 3.0 License](https://github.com/ayys/wasmie/blob/master/LICENSE).
-
 
 ## Progress so far
 
@@ -84,6 +75,8 @@ Wasmie is licensed under the [GPL 3.0 License](https://github.com/ayys/wasmie/bl
 | upgrade           | Update one or all packages from the active registry                                    |
 | list              | List all known registries                                                              |
 | config-file       | Print the registry config file to stdout                                               |
+
+#### wasmie registry add
 
 ```bash
 $ wasmie registry add
@@ -148,6 +141,8 @@ either switch to interactive mode by removing the `--non-interactive` flag, or
 pass the `--endpoint` flag with argument URL to a valid wasmer registry.
 ```
 
+#### wasmie registry remove
+
 ```bash
 $ wasmie registry remove
 [1] wapm-dev
@@ -178,6 +173,8 @@ wapm-dev, wapm-prod.
 Use the `wasmie registry list` to get more info about all the existing registies.
 ```
 
+#### wasmie registry search
+
 ```bash
 $ wasmie registry search <partial_package_name>
 Found 10 packages matching your search on registry `wapm-dev`
@@ -188,6 +185,8 @@ wasmer/ls@1.2.0
 unicode-prettytable@0.3.1
   Table formatting library using Unicode Box-drawing characters
 ```
+
+#### wasmie registry validate
 
 ```bash
 $ wasmie registry validate
@@ -209,6 +208,8 @@ Registry `wapm-dev` is a valid registry ✅
 The following registries are not valid:
 	- `wapm-dev`
 ```
+
+#### wasmie registry login
 
 ```bash
 $ wasmie registry login
@@ -233,11 +234,15 @@ $ wasmie registry login <token1> # uses token 1
 You've successfully logged in as aysjha.
 ```
 
+#### wasmie registry logout
+
 ```bash
 $ wasmie registry logout
 
 You've logged out of your account (ayys) on registry `wapm-dev`
 ```
+
+#### wasmie registry packages
 
 ```bash
 $ wasmie registry packages
@@ -250,6 +255,8 @@ aysjha/test1@1.2034.3
 	Test program written by aysjha
 ```
 
+#### wasmie registry new-token
+
 ```bash
 $ wasmie registry new-token
 2983ue9823h29rnf9h92r92hr92hr2
@@ -257,6 +264,8 @@ $ wasmie registry new-token
 $ wasmie registry new-token
 Please login to the registry to generate a new token.
 ```
+
+#### wasmie registry invalidate-token
 
 ```bash
 $ wasmie registry invalidate-token <token>
@@ -270,6 +279,8 @@ $ wasmie registry invalidate-token <token> -y
 The token has been invalidated.
 ```
 
+#### wasmie registry list-tokens
+
 ```bash
 $ wasmie registry list-tokens
 
@@ -281,15 +292,21 @@ meow-2
 	laksjdhoashd98asdas98dha9
 ```
 
+#### wasmie registry active
+
 ```bash
-$ wasmie registry get-active
+$ wasmie registry active
 wapm-dev
 ```
 
+#### wasmie registry use
+
 ```bash
-$ wasmie registry set-active <registry>
+$ wasmie registry use <registry>
 Active registry set to `<registry>`. You're automatically logged in as aysjha
 ```
+
+#### wasmie registry namespaces
 
 ```bash
 $ wasmie registry namespaces
@@ -303,8 +320,10 @@ namespace-two
 	5 packages, 1 app
 ```
 
+#### wasmie registry upgrade
+
 ```bash
-$ wasmie registry update
+$ wasmie registry upgrade
 
 The following packages need to be updated:
 hello/ays
@@ -330,6 +349,8 @@ Updating packages [................]
 
 Youve successfully updated hello/meow to version 0.1.3 in the registry.
 ```
+
+#### wasmie registry list
 
 ```bash
 $ wasmie registry list
@@ -435,3 +456,13 @@ wapm-dev: https://registry.wapm.dev
 	This is the description
 
 ```
+
+
+## Contributing
+
+Contributions to Wasmie are welcome and appreciated! Please see the contribution guidelines for more information on how to get started.
+Wasmie is a third party CLI for wasmer.
+
+## License
+
+Wasmie is licensed under the [GPL 3.0 License](https://github.com/ayys/wasmie/blob/master/LICENSE).
