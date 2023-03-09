@@ -65,24 +65,25 @@ Wasmie is licensed under the [GPL 3.0 License](https://github.com/ayys/wasmie/bl
 # CLI design
 
 ### registry
-
-| add | Add a new registry to to the local config file |
-| --- | --- |
-| remove | Remove a registry from the local config file |
-| search | search for packages in the current registry |
-| validate | Verify that all the registries in the config file are valid wasmer registries |
-| login | Login to the current registry |
-| logout | Logout of the current registry |
-| packages | List all installed packages from the active registry |
-| new-token | Get a new token for the active registry |
-| inavalidate-token | Invalidate a token from the active registry |
-| list-tokens | List all the tokens for the active registry |
-| active | Get the current registry |
-| use | Set a registry to be the active registry |
-| namespaces | List all namespaces on the current registry (this includes both namespaces + username) |
-| upgrade | Update one or all packages from the active registry |
-| list | List all known registries |
-| config-file | Print the registry config file to stdout |
+|-------------------|----------------------------------------------------------------------------------------|
+| Command           | Description                                                                            |
+|-------------------|----------------------------------------------------------------------------------------|
+| add               | Add a new registry to to the local config file                                         |
+| remove            | Remove a registry from the local config file                                           |
+| search            | search for packages in the current registry                                            |
+| validate          | Verify that all the registries in the config file are valid wasmer registries          |
+| login             | Login to the current registry                                                          |
+| logout            | Logout of the current registry                                                         |
+| packages          | List all installed packages from the active registry                                   |
+| new-token         | Get a new token for the active registry                                                |
+| inavalidate-token | Invalidate a token from the active registry                                            |
+| list-tokens       | List all the tokens for the active registry                                            |
+| active            | Get the current registry                                                               |
+| use               | Set a registry to be the active registry                                               |
+| namespaces        | List all namespaces on the current registry (this includes both namespaces + username) |
+| upgrade           | Update one or all packages from the active registry                                    |
+| list              | List all known registries                                                              |
+| config-file       | Print the registry config file to stdout                                               |
 
 ```bash
 $ wasmie registry add
@@ -340,13 +341,15 @@ wapm-dev
 ```
 
 ### package
-
-| clone | Clone a package into the current directory |
-| --- | --- |
-| fork | Fork a package on the registry |
+|---------|-----------------------------------------------------|
+| Command | Description                                         |
+|---------|-----------------------------------------------------|
+| clone   | Clone a package into the current directory          |
+| fork    | Fork a package on the registry                      |
 | publish | Publish the package at path to the current registry |
-| run | Run a package from the registry |
-| install | Globally install a package from the registry |
+| run     | Run a package from the registry                     |
+| install | Globally install a package from the registry        |
+
 
 ## Wasmie config files
 
