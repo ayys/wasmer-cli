@@ -108,6 +108,8 @@ The following tasks are currently being worked on for Wasmie:
 
 #### wasmie registry add
 
+This command adds a new registry to Wasmie CLI. The user provides the name, endpoint, and description, and the command validates the endpoint. If successful, it adds the new registry to the list and returns a success message. The --non-interactive flag reminds the user to switch to interactive mode or provide an endpoint URL.
+
 ```bash
 $ wasmie registry add
 Name: registry-dev
@@ -173,6 +175,10 @@ pass the `--endpoint` flag with argument URL to a valid wasmer registry.
 
 #### wasmie registry remove
 
+This command removes a registry from Wasmie CLI. The user is prompted to choose which registry to remove, and the command warns them that packages from that registry cannot be updated anymore. The user is then asked to confirm before the registry is removed.
+
+Alternatively, the user can specify the registry name and use the --non-interactive flag to bypass the confirmation prompt. If the user does not provide a name, the command reminds them to do so and suggests using wasmie registry list to view all existing registries.
+
 ```bash
 $ wasmie registry remove
 [1] wapm-dev
@@ -204,7 +210,7 @@ Use the `wasmie registry list` to get more info about all the existing registies
 ```
 
 #### wasmie registry search
-
+This command searches for packages in the Wasmie CLI registry that match a partial package name provided by the user. The command returns a list of packages that match the search query, along with a brief description of each package, including the package name and version number.
 ```bash
 $ wasmie registry search <partial_package_name>
 Found 10 packages matching your search on registry `wapm-dev`
@@ -217,7 +223,7 @@ unicode-prettytable@0.3.1
 ```
 
 #### wasmie registry validate
-
+The wasmie registry validate command validates the registries configured in the local environment. It verifies whether the registry is a valid wasmer registry or not. If all registries are valid, it returns a success message. If any registry is invalid, it returns a list of invalid registries.
 ```bash
 $ wasmie registry validate
 Validating registry `wapm-dev`...
@@ -240,6 +246,7 @@ The following registries are not valid:
 ```
 
 #### wasmie registry login
+These commands are used to login to a wasmer registry using an access token. The first command prompts the user to enter their token, while the second command allows the token to be provided as an argument. The third command informs the user that the provided token is not valid. The fourth command sets the token as an environment variable and the login command uses it for authentication. The fifth command specifies a new token as an argument, but the command still uses the token from the environment variable.
 
 ```bash
 $ wasmie registry login
@@ -265,7 +272,7 @@ You've successfully logged in as aysjha.
 ```
 
 #### wasmie registry logout
-
+This command logs out the user from the active registry.
 ```bash
 $ wasmie registry logout
 
@@ -273,7 +280,7 @@ You've logged out of your account (ayys) on registry `wapm-dev`
 ```
 
 #### wasmie registry packages
-
+The command wasmie registry packages lists the downloaded packages from the active registry, including package name, version, and description.
 ```bash
 $ wasmie registry packages
 List of downloaded packages from registry `wapm-dev`
