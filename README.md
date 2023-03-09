@@ -1,18 +1,57 @@
-# wasmer-cli
+# WASMIE
+## Introduction
+Wasmie is a third-party command-line interface (CLI) tool for Wasmer, a WebAssembly runtime that enables developers to run WebAssembly code outside of the web browser. The purpose of Wasmie is to provide a more user-friendly interface to interact with Wasmer and to streamline common tasks.
 
-A demo CLI for wasmer
+## Features
+
+Wasmie provides several subcommands for interacting with Wasmer, including:
+
+- `registry`: Commands for managing packages in the Wasmer registry, such as listing available packages, adding new packages, and upgrading existing packages.
+- `package`: Commands for working with local WebAssembly packages, such as publishing packages, running them locally, and cloning/forking existing packages.
+
+Progress
+
+The following tasks are currently being worked on for Wasmie:
+
+- **CI** integration: Implementing continuous integration (CI) to publish the package for all platforms.
+- **Testing**: Writing tests for each command and logic functions to ensure the stability and reliability of the CLI.
+- **Registry subcommand**: Implementing the logic functions for the remaining commands in the registry subcommand.
+- **Package subcommand**: Implementing the logic functions for the commands in the package subcommand.
+
+## Contributing
+
+Contributions to Wasmie are welcome and appreciated! Please see the contribution guidelines for more information on how to get started.
+Wasmie is a third party CLI for wasmer.
+
+## License
+
+Wasmie is licensed under the [GPL 3.0 License](https://github.com/ayys/wasmie/blob/master/LICENSE).
 
 
-## wasmie
-- [ ] List existing registries
-  Read the config file and spitting out all the registries in there
-- [ ] Add a new registry
-  verify that it's a valid wapm registry. Then add a new entry to the config file
-- [ ] Remove a registry
-  Remove the lines for that registry from the config file
-- [ ] Login to a registry
-  Call the graphql API to login, get the token and store it in the config file.
-- [ ] Logout of a registry
-  Remove the token from the config file
-- [ ] Search for a package
-  Search for a package in the current registry via the graphql API.
+## Progress so far
+
+- [ ] Add CI to publish package for all platforms
+- [ ] Write tests for each command
+- [ ] Write tests for logic functions
+- [ ] Implement logic functions for registry subcommand
+  - [x] `active`
+  - [ ] `add`
+  - [x] `config-file`
+  - [ ] `invalidate-token`
+  - [x] `list`
+  - [ ] `list-tokens`
+  - [ ] `login`
+  - [ ] `logout`
+  - [ ] `namespaces`
+  - [ ] `new-token`
+  - [ ] `packages`
+  - [ ] `remove`
+  - [ ] `search`
+  - [ ] `upgrade`
+  - [ ] `use`
+  - [ ] `validate`
+- [ ] Implement logic functions for package subcommand
+  - [ ] `clone`
+  - [ ] `fork`
+  - [ ] `publish`
+  - [ ] `run`
