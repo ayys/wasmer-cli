@@ -38,24 +38,25 @@ Wasmie is licensed under the [GPL 3.0 License](https://github.com/ayys/wasmie/bl
 - [ ] Write tests for each command
 - [ ] Write tests for logic functions
 - [ ] Implement logic functions for registry subcommand
-  - [x] `active`
-  - [ ] `add`
-  - [x] `config-file`
-  - [ ] `invalidate-token`
-  - [x] `list`
-  - [ ] `list-tokens`
-  - [ ] `login`
-  - [ ] `logout`
-  - [ ] `namespaces`
-  - [ ] `new-token`
-  - [ ] `packages`
-  - [ ] `remove`
-  - [ ] `search`
-  - [ ] `upgrade`
-  - [ ] `use`
-  - [ ] `validate`
+  - [x] `active` Get the current registry
+  - [ ] `use` Set a registry to be the active registry
+  - [ ] `add` Add a new registry to to the local config file
+  - [ ] `remove` Remove a registry from the local config file
+  - [ ] `search` search for packages in the active registry
+  - [ ] `validate` Verify that all the registries in the config file are valid wasmer registries
+  - [ ] `login` Login to the active registry
+  - [ ] `logout` Logout of the active registry
+  - [ ] `packages` List all installed packages from the active registry
+  - [ ] `new-token` Get a new token for the active registry
+  - [ ] `list-tokens` List all the tokens for the active registry
+  - [ ] `invalidate-token` Invalidate a token from the active registry
+  - [x] `config-file` Print the registry config file to stdout
+  - [x] `list` List all known registries
+  - [ ] `namespaces` List all namespaces on the current registry (this includes both namespaces + username)
+  - [ ] `upgrade` Update one or all packages from the active registry
 - [ ] Implement logic functions for package subcommand
-  - [ ] `clone`
-  - [ ] `fork`
-  - [ ] `publish`
-  - [ ] `run`
+  - [ ] `clone` Clone a package into the current directory
+  - [ ] `fork` Fork a package on the registry
+  - [ ] `publish` Publish the package at path to the current registry
+  - [ ] `run` Run a package from the registry
+  - [ ] `install` Globally install a package from the registry
