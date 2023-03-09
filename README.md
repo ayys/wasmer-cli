@@ -65,7 +65,7 @@ Wasmie is licensed under the [GPL 3.0 License](https://github.com/ayys/wasmie/bl
 # CLI design
 
 ### registry
-|-------------------|----------------------------------------------------------------------------------------|
+
 | Command           | Description                                                                            |
 |-------------------|----------------------------------------------------------------------------------------|
 | add               | Add a new registry to to the local config file                                         |
@@ -341,7 +341,6 @@ wapm-dev
 ```
 
 ### package
-|---------|-----------------------------------------------------|
 | Command | Description                                         |
 |---------|-----------------------------------------------------|
 | clone   | Clone a package into the current directory          |
