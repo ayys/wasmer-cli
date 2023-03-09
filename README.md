@@ -2,6 +2,36 @@
 
 # NOTE: Most commands are not implemented yet. This is a very bare-bones cli. Please do not use it right now.
 
+- [Introduction](#introduction)
+- [Features](#features)
+- [Progress](#progress)
+- [Progress so far](#progress-so-far)
+- [CLI design](#cli-design)
+    + [registry](#registry)
+      - [wasmie registry add](#wasmie-registry-add)
+      - [wasmie registry remove](#wasmie-registry-remove)
+      - [wasmie registry search](#wasmie-registry-search)
+      - [wasmie registry validate](#wasmie-registry-validate)
+      - [wasmie registry login](#wasmie-registry-login)
+      - [wasmie registry logout](#wasmie-registry-logout)
+      - [wasmie registry packages](#wasmie-registry-packages)
+      - [wasmie registry new-token](#wasmie-registry-new-token)
+      - [wasmie registry invalidate-token](#wasmie-registry-invalidate-token)
+      - [wasmie registry list-tokens](#wasmie-registry-list-tokens)
+      - [wasmie registry active](#wasmie-registry-active)
+      - [wasmie registry use](#wasmie-registry-use)
+      - [wasmie registry namespaces](#wasmie-registry-namespaces)
+      - [wasmie registry upgrade](#wasmie-registry-upgrade)
+      - [wasmie registry list](#wasmie-registry-list)
+    + [package](#package)
+- [Wasmie config files](#wasmie-config-files)
+    + [registries.toml - list of registries](#registriestoml---list-of-registries)
+    + [packages.toml - list of installed packages](#packagestoml---list-of-installed-packages)
+    + [tokens.toml - list of tokens for a user](#tokenstoml---list-of-tokens-for-a-user)
+    + [wasmie.toml](#wasmietoml)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Introduction
 Wasmie is a third-party command-line interface (CLI) tool for Wasmer, a WebAssembly runtime that enables developers to run WebAssembly code outside of the web browser. The purpose of Wasmie is to provide a more user-friendly interface to interact with Wasmer and to streamline common tasks.
 
