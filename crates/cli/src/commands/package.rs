@@ -2,7 +2,9 @@ use std::path::PathBuf;
 
 use clap::{Args, Parser, Subcommand};
 
-use crate::logic::package::{clone::clone, fork::fork, publish::publish, run::run};
+use crate::logic::package::{
+    clone::clone, fork::fork, install::install, publish::publish, run::run,
+};
 
 #[derive(Args, Debug)]
 pub struct PackageNameArg {
@@ -28,6 +30,9 @@ pub enum Commands {
     /// Run a package from the current registry
     #[clap(name = "run")]
     Run(PackageNameArg),
+    /// Globally install a package from the registry
+    #[clap(name = "install")]
+    Install(PackageNameArg),
 }
 
 impl Commands {
@@ -36,6 +41,7 @@ impl Commands {
             Commands::Fork(package_name_arg) => fork(&package_name_arg.package_name),
             Commands::Clone(package_name_arg) => clone(&package_name_arg.package_name),
             Commands::Run(package_name_arg) => run(&package_name_arg.package_name),
+            Commands::Install(package_name_arg) => install(&package_name_arg.package_name),
             Commands::Publish(path_arg) => publish(&path_arg.path),
         }
     }
